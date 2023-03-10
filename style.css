@@ -9,6 +9,7 @@ font-family: 'Tinos', serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
 
 h1,
@@ -39,7 +40,9 @@ body {
 }
 .content {
 	justify-content: space-around;
+	padding-bottom: 50px;
 }
+.inputNum,
 .ball {
 	background-color: white;
 	height: 100px;
@@ -48,25 +51,63 @@ body {
 	box-shadow: 10px 12px 20px black;
 	display: flex;
 	justify-content: center;
-	align-items: center;    
+	align-items: center;
+}
+
+.ball.red {
+	background-color: red;
+	color: white;
+}
+
+.ball.red span {
+	text-shadow: 2px 2px rgb(0, 0, 0);
 }
 
 .ball span {
 	font-size: 48px;
-	font-family: "Roboto", sans-serif;
 	font-weight: 800;
-	text-shadow: 2px 2px red;   
-    /* transform: translate(50%); */
+	text-shadow: 2px 2px red;
 }
 
-button{
-    background-color: yellow;
-    padding: 5px 7px;
-    font-size: 26px;
-    font-weight: 700;
-    border: 2px solid gray;
-    outline: none;
-    font-family: "Roboto", sans-serif;
+.input-number h2 {
+	text-align: center;
+	margin-bottom: 25px;
+	font-size: 42px;
+	font-style: italic;
+	font-weight: 700;
+}
+
+.input-number li {
+	padding: 0 15px;
+}
+
+.inputNum {
+	text-align: center;
+	outline: none;
+	border: 5px solid black;
+	color: black;
+	font-size: 48px;
+	font-weight: 800;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+button {
+	background-color: yellow;
+	padding: 5px 7px;
+	font-size: 26px;
+	font-weight: 700;
+	border: 2px solid gray;
+	outline: none;
+	font-family: "Roboto", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -74,17 +115,30 @@ button{
 		font-size: 26px;
 		font-weight: 500;
 	}
+	.inputNum,
 	.ball {
 		height: 60px;
 		width: 60px;
 	}
-    .ball span {
-        font-size: 32px;
-        font-weight: 600;
-    }
-    button{
-        padding: 4px 5px;
-        font-size: 18px;
-        font-weight: 600;
-    }
+	.ball {
+		margin: 0 20px;
+	}
+	.content {
+		flex-wrap: wrap;
+		gap: 20px 0;
+	}
+	.inputNum,
+	.ball span {
+		font-size: 32px;
+		font-weight: 600;
+	}
+	.input-number h2 {
+		font-size: 26px;
+		font-weight: 500;
+	}
+	button {
+		padding: 4px 5px;
+		font-size: 18px;
+		font-weight: 600;
+	}
 }
